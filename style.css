@@ -16,7 +16,7 @@ body {
     position: relative;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
         url("images/lake\ louise.jpg") no-repeat center center;
     background-size: cover;
     background-position: center top;
@@ -40,6 +40,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.heroContent h1 {
+    font-size: 48px;
+    padding: 30px;
+}
+
+.heroContent p {
+    font-size: 24px;
 }
 
 .background {
@@ -263,7 +272,7 @@ body {
 }
 
 .cardInformacoes i {
-    font-size: 2.5rem;
+    font-size: 40px;
     color: #c8102e;
     margin-bottom: 15px;
     display: block;
@@ -272,12 +281,12 @@ body {
 .cardInformacoes h3 {
     color: #003c7d;
     margin-bottom: 10px;
-    font-size: 1.2rem;
+    font-size: 20px;
 }
 
 .cardInformacoes p {
     color: #555;
-    font-size: 0.95rem;
+    font-size: 16px;
     line-height: 1.5;
     text-align: center;
     margin: 0;
@@ -287,7 +296,7 @@ body {
     text-align: center;
     margin: 40px 0 20px;
     color: #003c7d;
-    font-size: 2rem;
+    font-size: 32px;
     position: relative;
     padding-bottom: 15px;
 }
@@ -311,10 +320,75 @@ body {
 }
 
 .cardValue {
-    font-size: 1.4rem;
+    font-size: 22px;
     font-weight: bold;
     color: #c8102e;
     margin: 10px 0;
+}
+
+.videoSection {
+    background: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.videoContainer {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e7ff;
+}
+
+.videoTitle {
+    color: #003c7d;
+    font-size: 36px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.videoTitle:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #c8102e;
+    border-radius: 2px;
+}
+
+.videoDescription {
+    max-width: 800px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.videoWrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background: #000;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 @media (max-width: 900px) {
@@ -357,6 +431,10 @@ body {
     .cardInformacoes {
         width: calc(50% - 20px);
     }
+
+    .video-title {
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -370,16 +448,24 @@ body {
     }
 
     .heroContent h1 {
-        font-size: 2rem;
+        font-size: 32px;
     }
 
     .heroContent p {
-        font-size: 1rem;
+        font-size: 16px;
     }
 
     .cardInformacoes {
         width: 100%;
         max-width: 300px;
+    }
+
+    .video-section {
+        padding: 40px 15px;
+    }
+
+    .video-container {
+        padding: 20px 15px;
     }
 }
 
@@ -410,6 +496,6 @@ body {
 }
 
 .copyright {
-    font-size: 1.1rem;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.9);
 }
