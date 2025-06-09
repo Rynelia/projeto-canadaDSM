@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #f0f8ff, #e6f2ff);
+    min-height: 100vh;
+    color: #333;
+    padding-top: 120px;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("images/lake\ louise.jpg") no-repeat center center;
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    padding: 30px;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scrollIndicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 0.9rem;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scrollIndicator span {
+    margin-bottom: 10px;
+    font-weight: 600px;
+    letter-spacing: 1px;
+}
+
+.arrowDown {
+    position: absolute;
+    bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    animation: bounce 2s infinite;
+}
+
+.arrowDown svg {
+    width: 100%;
+    height: 100%;
+}
+
+.arrowDown path {
+    fill: #17c5e7;
+    stroke: #0d9bbb;
+}
+
+@keyframes titleGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(0, 212, 255, 0.7),
+            0 0 60px rgba(0, 212, 255, 0.4);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    height: 120px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(135deg, #e6f2ff 0%, #ffffff 50%, #f0f8ff 100%);
+    border-bottom: 4px solid #003c7d;
+}
+
+.logoContainer {
+    width: 100px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logoContainer svg {
+    width: 70%;
+    height: 70%;
+}
+
+.logoText {
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0 2 4px rgba(0, 0, 0, 0.1);
+    margin-left: 2%;
+}
+
+.navUL {
+    margin-left: auto;
+}
+
+.navLinks {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navLinks a {
+    color: #003c7d;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 30px;
+    transition: all 0.3 ease;
+    background: rgba(255, 255, 255, 0.8);
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navLinks a:hover {
+    background: #003c7d;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.informacoesCanadaContainer {
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    background: white;
+    overflow: hidden;
+    margin-top: 0px;
+    gap: 0;
+}
+
+.informacoesCanada {
+    flex: 0 0 50%;
+    padding: 40px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.informacoesCanada h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    border-left: 5px solid #c8102e;
+    padding-left: 15px;
+    color: #003c7d;
+}
+
+.informacoesCanada p {
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.informacoesCanada sup {
+    font-size: 10px;
+    color: #c8102e;
+    vertical-align: super;
+}
+
+.imageContainer {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.informacoesCanadaImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.Informacoes {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.cardInformacoes {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border-top: 4px solid #c8102e;
+}
+
+.cardInformacoes:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cardInformacoes i {
+    font-size: 2.5rem;
+    color: #c8102e;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.cardInformacoes h3 {
+    color: #003c7d;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.cardInformacoes p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+@media (max-width: 900px) {
+    .navbar {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .logoText {
+        font-size: 22px;
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navUL {
+        margin: 15px auto 0;
+    }
+
+    .navLinks {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .informacoesCanadaContainer {
+        flex-direction: column;
+    }
+
+    .informacoesCanada,
+    .imageContainer {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .imageContainer {
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navLinks {
+        gap: 10px;
+    }
+
+    .navLinks a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .heroContent h1 {
+        font-size: 2rem;
+    }
+
+    .heroContent p {
+        font-size: 1rem;
+    }
+
+    .cardInformacoes {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.cardIcon {
+    width: 40px;
+    height: 40px;
+}
+
+.footer {
+    background: linear-gradient(135deg, #00264d 0%, #003c7d 100%);
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 4px solid #c8102e;
+    position: relative;
+    z-index: 10;
+}
+
+.footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.flagFooterContainer {
+    width: 80px;
+    height: 40px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.copyright {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
