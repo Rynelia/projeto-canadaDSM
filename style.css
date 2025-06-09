@@ -249,6 +249,7 @@ body {
     padding: 40px 20px;
     max-width: 1500px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .cardInformacoes {
@@ -258,13 +259,7 @@ body {
     width: 400px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
     border-top: 4px solid #c8102e;
-}
-
-.cardInformacoes:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .cardInformacoes i {
@@ -284,7 +279,44 @@ body {
     color: #555;
     font-size: 0.95rem;
     line-height: 1.5;
+    text-align: center;
+    margin: 0;
 }
+
+.sectionTitle {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #003c7d;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.sectionTitle:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #c8102e;
+    border-radius: 2px;
+}
+
+.cardIcon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+.cardValue {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #c8102e;
+    margin: 10px 0;
+}
+
 @media (max-width: 900px) {
     .navbar {
         height: auto;
@@ -321,6 +353,10 @@ body {
     .imageContainer {
         height: 400px;
     }
+
+    .cardInformacoes {
+        width: calc(50% - 20px);
+    }
 }
 
 @media (max-width: 600px) {
@@ -345,11 +381,6 @@ body {
         width: 100%;
         max-width: 300px;
     }
-}
-
-.cardIcon {
-    width: 40px;
-    height: 40px;
 }
 
 .footer {
